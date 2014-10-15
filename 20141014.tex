@@ -1,0 +1,235 @@
+%%%%%
+%
+% 14-OCT-2014 Oliver Bach (bach@decfreak.de) finxit
+% Template file for LaTeX typesetting with documentclass article
+%
+%%%%%
+
+\documentclass{article}
+
+
+\usepackage{ngerman} % Fuer neue deutsche Rechtschreibung
+
+\usepackage{graphicx} % Fuer Grafiken/Bilder
+
+\usepackage{multicol} % Fuer Mehrspaltigen Textsatz
+
+\usepackage{amsmath}
+
+
+
+
+\begin{document}
+
+	\date{13-OCT-2014}
+	\title{Eine Einf"uhrung in LaTeX}
+	\author{Oliver Bach}
+
+\maketitle
+
+\tableofcontents
+
+	\newpage
+
+\listoftables
+
+\listoffigures
+
+	\newpage
+
+Inhalt
+
+\section{Wald}
+
+	Ein bisschen Inhalt zu Wald
+
+ \subsection{Tannenwald}
+
+	Wir schreiben hier mal irgendwelchen Text.
+	Und ich fange hier in einer neuen Zeile an. \\
+	Und wieder in einer neuen Zeile, ohne dass das
+	irgendwelche Auswirkungen hat.
+
+\newpage
+
+ \subsection{Laubwald}
+
+	Ganz, ganz viel Flie"stext schreiben.
+
+	\begin{itemize}
+		\item Hier ist ein Punkt, der ganz viel Text hat und extra lang wird, und dann "uber die n"achste Zeile hinausgeht
+		 \subitem - Hier ist ein neuer Punkt
+		 \subitem Hier noch etwas
+	\end{itemize}
+
+
+	\begin{table}
+
+		\begin{tabular}[h]{l|c|r}
+	 	\hline
+			Erste Spalte &	Zweite Spalte	& Dritte Spalte	\\
+			links		& mitte		& rechts	\\
+		\hline
+		\end{tabular}
+
+	\caption{Meine erste Tabelle}
+	\label{erstetabelle}
+
+	\end{table}
+
+
+ \subsubsection{Bl"atter}
+
+	\begin{enumerate}
+		\item Hier ist ein Punkt, der ganz viel Text hat und extra lang wird, und dann "uber die n"achste Zeile hinausgeht
+		 \subitem Hier ist ein neuer Punkt
+		 \subitem Hier noch etwas
+		\item Hier ein gro"ser Punkt
+	\end{enumerate}
+ 
+ \subsection{Nadeln}
+
+	Diese Tabelle hat kein label und auch keine caption
+	
+	\begin{tabular}[h]{l|c|r}
+ 		\hline
+		Erste Spalte &	Zweite Spalte	& Dritte Spalte	\\
+		links		& mitte		& rechts	\\
+		\hline
+	\end{tabular}
+
+ \subsection{Mischwald}
+
+ 	Diese Ergebnisse finden Sie in Tabelle \ref{erstetabelle} auf Seite \pageref{erstetabelle}
+
+ \subsubsection{"Ubergang}
+
+	Ich will aber Ma"snahmen treffen.
+
+\section{Hof}
+
+\section{Wiese}
+
+	Ein bisschen Inhalt zu Wiese.
+
+\newpage
+
+
+ \subsection{Bild} \label{sec:bilder}
+
+
+	\begin{figure}[h]
+	
+		\begin{center}
+	
+		\includegraphics[width=0.25\textwidth]{Images/lolcat-sample.jpg}
+		\caption{Mein Bild von einer s"u"sen Katze}
+		\label{fig:katze}
+	
+		\end{center}
+
+	\end{figure}
+
+
+	Das Ergebnis ist in Abbildung \ref{fig:katze} zu sehen.
+
+
+	\begin{figure}[h]
+	
+		\begin{center}
+	
+		\includegraphics[width=0.25\textwidth]{Images/lolcat-sample.jpg}
+		\caption{Mein Bild von einer s"u"sen Katze zum zweiten Mal}
+		\label{fig:katze2}
+	
+		\end{center}
+
+	\end{figure}
+
+	Das Finden Sie in Abschnitt \ref{sec:bilder}
+
+
+
+	Text,d er mehrspaltig dargestellt wird:
+
+ 	\begin{multicols}{4}
+	[
+	\section{First Section}
+	All human things are subject to decay. And when fate summons, Monarchs must obey. \\
+	--- Dies wird noch in einer Spalte dargestellt.
+ 	]
+	Hello, here is some text without a meaning.  This text should show what 
+	a printed text will look like at this place.
+	If you read this text, you will get no information.  Really?  Is there 
+	no information?  Is there...
+	Hier schreibe ich noch weiteren Inhalt dazu.
+	Und noch mehr Inhalt dazu.
+	\end{multicols}
+   
+\newpage
+
+	Ein paar Formel: 
+	$\sum^{9}_{i=5}{4*i}$
+	
+	oder ein Bruch: $\frac{5}{6}$
+
+	
+   \vspace*{2cm}
+
+  	Hier eine gro"se Formel, die durch die Verwendung von zwei \${}\${} gr"o"ser gesetzt wird,
+	also das obige Beispiel mit nur einem \${}:
+
+   	$$ \frac{67}{\sum^{9}_{i=5}{4*i}} $$
+
+
+
+
+
+\newpage
+
+	\textbf{fett} \textit{kursiv} \underline{unterstrichen} \\
+
+	\textbf{ \textit{ \underline {hier steht etwas unterstrichenes kursives und fettes } }  }
+
+
+	Sonderzeichen, die von \LaTeX belegt sind:
+	\&
+	
+	\$
+	
+	\%
+	
+	$\backslash $
+
+	Die verschiedenen Bindestriche, und das Minus:
+	- \\
+	-- \\
+	--- \\
+	$-$
+
+	
+	
+	W\"alder, W\"elder
+
+	``Hier etwas in Anf"uhrungszeichen''\footnote{irgendwas dazu}
+
+	\glqq Hier ein Zitat in Deutsch \glq{}mit einfachem Anf"uhrungszeichen\grq{} \grqq
+
+	Diesen Gedanken finden sie auch bei\footnote{ \cite[S. 13]{AG14-2014} }
+
+\newpage
+
+
+\begin{thebibliography}{Gloger-hihihi2013}
+
+	\bibitem[AG14-2014]{AG14-2014}
+		Gloger, Stefan: \textit{irgendwas wichtiges}.
+		Pieper-Verlag, M"unchen, 2014, ISBN 978-47839-92382-X.
+	
+	\bibitem[Gloger-hihihi2013]{gloger}
+		Gloger, irgendwer $\ldots$
+
+\end{thebibliography}
+
+
+\end{document}
