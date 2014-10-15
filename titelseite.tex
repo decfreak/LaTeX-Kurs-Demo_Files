@@ -1,0 +1,58 @@
+%%%%%
+%
+% 15-OCT-2014 Oliver Bach (bach@decfreak.de) finxit
+% Example for a thesis titlepage with plain LaTeX
+%
+%%%%%
+
+\documentclass{article}
+
+\usepackage{ngerman}
+
+\usepackage{kpfonts} %% Eine Sammlung schon Schriften
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+% Die Einbindung des Logos ist auskommentiert
+%
+% \includegraphics[scale=1.0]{Bilder/logo.pdf}
+
+	\vspace*{3cm} % statt des Logos werden hier 3cm Platz eingeraeumt
+
+	\vspace{0.8cm}
+	{ \LARGE Hochschule }\\ 
+
+	{
+		\Large - Fachbereich - \\ 
+
+		\vspace{1.8cm} 
+		{\it \glqq{}Titel der Abschlussarbeit, der auch mal sehr lang sein kann in heutigen Zeiten \grqq{} } \\
+		
+		\vspace{0.8cm}
+		Abschlussarbeit zur Erlangung \\
+		des akademischen Grades \\
+		Bachelor of Science (B.Sc.) \\ 
+
+		\vspace{0.8cm}
+		vorgelegt von\\ 
+		{\it Vorname Nachname}
+
+		\vspace{1.8cm}
+		\begin{tabular}{lll} 
+			Referent &:& {\it Prof. Dr. Erster Betreuer}\\
+			Korreferent &:& {\it Prof. Dr. Zweiter Betreuer} 
+		\end{tabular}
+
+		\vspace{0.8cm}
+		Ausgabedatum: {\it 9. November 2012} \\
+		\vspace{0.25cm}
+		Abgabedatum: {\it \today}
+	}
+
+\end{center}
+\end{titlepage}
+
+\end{document}
