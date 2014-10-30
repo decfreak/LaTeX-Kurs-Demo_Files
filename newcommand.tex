@@ -1,14 +1,53 @@
+%%%%%
+%
+% 28-OCT-2014 Oliver Bach (bach@decfreak.de) finxit
+% Template file for creating new commands and definitions in LaTeX
+%
+%%%%%
 \documentclass{article}
 
-\newcommand{\wbalTwo}[2]
+\def\CC{\begin{itemize}}	%% Definition for the command \CC
+\def\CE{\end{itemize}}		%% Definition for the command \CE
+\def\DATUM{29-OCT-2014}		%% Definition for the command \DATUM
+
+\usepackage{ifthen}		%% Package for if-then-else constructs
+\newboolean{testboolean}	% new boolean to test for
+\setboolean{testboolean}{false} % setting of the boolean 'testboolean'
+
+
+\newcommand{\wbalTwo}[2]	% a new command with two parameters
 	{
   This is the Wikibook about LaTeX
     supported by #1 and #2
     	}
 
+\newcommand{\wbalFour}[4]	% a new command with four parameters
+	{Hallo #1, #2, #3 und #4}
+
+
+
+
 \begin{document}
 
+\CC				% use of definition \CC
+	\item bla
+\CE				% use of definition \CE
 
-\wbalTwo{John Doe}{Anthea Smith}
+\DATUM				% use of definition \DATUM
+
+
+
+\wbalFour{Jasmin}{Sabine}{Scharlotte}{Melanie}		% use of the command \wbalFour with four parameters
+
+\DATUM
+
+\wbalTwo{John Doe}{Anthea Smith}			% use of the command \wbalTwo with two parameters
+
+% \MeinBefehl						% demonstration of an 'undefined control sequence' error in the lecture
+
+ \ifthenelse{\boolean{testboolean}} 			% testing of a boolean and depending text in the document
+ 	{Hallo}						% Boolean true
+	{Auf Wiedersehen }				% Boolean false
+
 
 \end{document}
