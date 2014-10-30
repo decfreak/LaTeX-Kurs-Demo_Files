@@ -1,1 +1,6 @@
 \beamer@endinputifotherversion {3.33pt}
+\beamer@sectionintoc {1}{Erster Abschnitt}{3}{0}{1}
+\beamer@sectionintoc {2}{Zweiter Abschnitt}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Bla}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{blub}{11}{0}{2}
+\beamer@sectionintoc {3}{Dritte und letzte Section}{12}{0}{3}

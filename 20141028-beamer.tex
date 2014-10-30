@@ -1,10 +1,172 @@
+%%%%%
+%
+% 28-OCT-2014 Oliver Bach (bach@decfreak.de) finxit
+% Template file for beamer presentations with LaTeX
+%
+%%%%%
+
 \documentclass{beamer}
+
+\usepackage{marvosym}
+\usepackage{ngerman}
+\usepackage{graphicx}
+\usepackage{beamerthemesplit}
+
+%\usetheme{Rochester}		% Different Themes
+\usetheme{Darmstadt}
+
+% \useinnertheme{rectangles}
+ \useinnertheme{rounded}
+ \usecolortheme{rose}
+
+\setbeameroption{show notes}
+\setbeamercovered{transparent} %%% Transparenz einschalten
+
+  \title[Kurztitle f"ur Fu"sleiste \hspace{3.5cm}  \insertframenumber]
+ 	{\emph{Kompletter Titel der Pr"asenation}, \\
+		\small mit zweiter Zeile}
+ \author[Oliver Bach]{Oliver Bach, B.Sc. \\ (bach\MVAt{}decfreak.de)}
+ \date{Version 0.9, Stand: \today}
 
 
 \begin{document}
-
+ 
+%%
+ \begin{frame}
+  \titlepage   		% Titelseite
+  
+ \end{frame}
+%%
+\begin{frame}
+ \frametitle{"Ubersicht}
+ \tableofcontents
+\end{frame}
+%%
+\section{Erster Abschnitt}
+ \subsection{}
+%%
 \begin{frame}
  \frametitle{Eine Folie}
+
+	Ein bisschen Text
 \end{frame}
 
+\note
+{
+Meine Notiz
+\begin{itemize}
+	\item Bla
+	\item blub
+\end{itemize}
+}
+%%
+\begin{frame}
+ \frametitle{Aufz"ahlung}
+
+ \begin{itemize}[<+->]
+ 	\item erster Punkt
+	\item zweiter Punkt
+	\item dritter Punkt
+	\item<2> vierter Punkt
+ \end{itemize}
+
+\end{frame}
+%%
+\section{Zweiter Abschnitt}
+ \subsection{Bla}
+%%
+\begin{frame}
+ \frametitle{Normaler Text, nacheinander}
+ Hier kommt mein Text\\
+ \pause
+ und dies hier erst als zweites \\
+ \pause
+ Und mein dritter Text
+\end{frame}
+%%
+\subsection{blub}
+%%
+\begin{frame}
+ \frametitle{Bl"ocke}
+
+ \begin{block}{Name des Blocks}
+	Das hier ist ein allgemeiner Einf"uhrungstext
+ \end{block}
+
+ \begin{alertblock}{Definition}
+	Hier kommt eine wichtige Definition
+ \end{alertblock}
+
+ \begin{exampleblock}{Beispiel}
+ 	Und ein Beispiel dazu
+
+ \end{exampleblock}
+
+ \begin{block}{}
+	Ein Block ohne Name
+ \end{block}
+
+\end{frame}
+%%
+\section{Dritte und letzte Section}
+%%
+\begin{frame}
+ \frametitle{Bild}
+ 	\begin{center}
+		\includegraphics[width=0.75\textwidth]{Images/lolcat-sample.jpg}
+	\end{center}
+\end{frame}
+%%
+\begin{frame}
+ \frametitle{Formel}
+	Eine Formel: $\sum_{i=1}^{100} a ^ i$
+	\\
+	\pause
+	Eine gro"se Formel: $$ \sum_{i=1}^{100} a ^ i $$ \\
+	\pause
+	Von a $\rightarrow$ nach b $\Rightarrow$ und c bzw. $\Leftrightarrow$
+\end{frame}
+%%
+\begin{frame}[fragile]	% option 'fragile' is needed when using verbatim on a slide!
+ \frametitle{Code}
+
+ \begin{verbatim}
+	Hier steht
+	  mein Code
+ \end{verbatim}
+ 
+\end{frame}
+%%
+\begin{frame}[allowframebreaks]	% LaTeX can automatically break the content up in different slides
+ \frametitle{Quellen}
+	\begin{thebibliography}{Sommerville-2001}
+		\bibitem[Vo"s-2012]{Voss-2012}[Vo"s-2012]
+			Vo"s, Herbert: \textit{Einf"uhrung in \LaTeX} ---
+				unter Ber"ucksichtigung von pdfLaTeX XeLaTeX LuaLaTeX.
+			Lehmanns Media Verlag, Berlin, 2012, 1. Auflage, ISBN 978-3-86541-462-5.
+		\bibitem[Kloeckl-2002]{Kloeckl-2002}[Kloeckl-2002]
+			Kl"ockl, Ingo: \textit{LaTeX Tipps \& Tricks}.
+			dpunkt Verlag GmbH, 2. Auflage, 2002, ISBN 3-89864-145-7.
+		\bibitem[Liebing-1996]{Liebing-1996}[Liebing-1996]
+			Liebing, A.: \textit{Erste Arbeiten mit TeX}.
+			Prentice Hall Verlag GmbH, 1996, ISBN 3-8272-9521-1.
+		\bibitem[Schultis-1995]{Schultis-1995}[Schultis-1995]
+			Schultis, J. Kenneth: \textit{LaTeX-TiPS} -- Praktische Hinweise zur Erstellung technischer Dokumente.
+			Prentice Hall Verlag GmbH, 1995, ISBN 3-930436-25
+		\bibitem[Vo"s-2012]{Voss-2012}[Vo"s-2012]
+			Vo"s, Herbert: \textit{Einf"uhrung in \LaTeX} ---
+				unter Ber"ucksichtigung von pdfLaTeX XeLaTeX LuaLaTeX.
+			Lehmanns Media Verlag, Berlin, 2012, 1. Auflage, ISBN 978-3-86541-462-5.
+		\bibitem[Kloeckl-2002]{Kloeckl-2002}[Kloeckl-2002]
+			Kl"ockl, Ingo: \textit{LaTeX Tipps \& Tricks}.
+			dpunkt Verlag GmbH, 2. Auflage, 2002, ISBN 3-89864-145-7.
+		\bibitem[Liebing-1996]{Liebing-1996}[Liebing-1996]
+			Liebing, A.: \textit{Erste Arbeiten mit TeX}.
+			Prentice Hall Verlag GmbH, 1996, ISBN 3-8272-9521-1.
+		\bibitem[Schultis-1995]{Schultis-1995}[Schultis-1995]
+			Schultis, J. Kenneth: \textit{LaTeX-TiPS} -- Praktische Hinweise zur Erstellung technischer Dokumente.
+			Prentice Hall Verlag GmbH, 1995, ISBN 3-930436-25
+\end{thebibliography}
+\end{frame}
+%%
 \end{document}
