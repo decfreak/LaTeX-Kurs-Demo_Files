@@ -1,0 +1,176 @@
+%%%%%
+%
+% 22-JUN-2015 Oliver Bach (bach@decfreak.de) finxit
+% Template file for LaTeX typesetting with documentclass article
+%
+%%%%%
+
+%% An oberster Stelle wird die Dokumentenklasse definiert
+\documentclass{article}
+
+%% Anschlieszend folgen die Pakete, welche im Dokument verwendet werden sollen
+\usepackage{ngerman}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage[ngerman]{babel}
+\usepackage{todonotes}
+%\usepackage[disable]{todonotes} %% Diese Zeile schaltet alle noch vorhandenen ToDos im Dokument ab
+
+
+%% Hier beginnt der eigentliche Inhalt des Dokuments
+\begin{document}
+
+\pagenumbering{roman} %% Seitennummerierung mit Roemischen Seitennummern
+
+\tableofcontents %% Inhaltsverzeichnis
+
+\newpage %% Eine neue Seite beginnen
+
+\listoftodos %% 
+
+
+\newpage
+
+\pagenumbering{arabic} %% Wechsel zu arabischen Seitennummern - Es wird wieder bei Seite 1 begonnen zu zaehlen
+
+%% Ein Abschnitt der Stufe "Section"
+ \section{Abschnitt}
+
+ Blub
+
+%% Ein neuer Abschnitt der Stufe "Section"
+ \section{Noch ein Abschnitt}
+ 
+ Hallo \todo{Hier gehoert noch was hin} weiterschreiben %% Ein ToDo mitten in der Zeile
+
+%% Eine Aufzaehlung, welche durchnummeriert ist
+\begin{enumerate}
+	\item{ Erster Punkt}
+	\subitem Unteritem
+	\begin{itemize}
+		\item[*] bla
+		\item[0] blub
+	\end{itemize}
+	\item Zweiter
+	\item Blub
+\end{enumerate}
+
+
+%% Die gleiche Aufzaehlung, nur mit Aufzaehlungspunkten
+\begin{itemize}
+	\item{ Erster Punkt}
+	\subitem Unteritem
+	\begin{itemize}
+		\item[*] bla
+		\item[0] blub
+	\end{itemize}
+	\item Zweiter
+	\item Blub
+\end{itemize}
+
+
+ viele leerzeilen \todo[inline]{Hier ein Breites ToDo}
+ keine leerzeile
+
+ eine leerzeile \newline
+ oder die Kurzform \\
+ bisscen text
+
+%% Ein Unterabschnitt der Stufe "SubSection"
+  \subsection{Unterabschnitt}
+	Bisschen Text im Unterabschnitt
+
+  \subsection{Noch ein Unterabschnitt}
+
+  \subsection*{Dritter Unterabschnitt}
+  	Dieser wird nicht durchnummeriert.
+	Des\-oxyribo\-nuklein\-s"aure.
+	Stra"se
+
+ \subsection{Vierter Unterabschnitt}
+ 	\label{sec:Maier}
+
+	Noch ein unterabschnitt, der nummeriert wird.
+
+	Deutschedonaudampfschifffahrtsgesellschaft.
+	Jopsfienschen
+
+\section{Tabelle}
+
+%% Der Beginn einer Table-Umgebung
+
+\begin{table}
+	\label{tab:hoffmann} %% Ein Label zum Referenzieren der Tabelle
+
+%% Die eigentliche Tabelle innerhalb der Table-Umgebung
+\begin{tabular}{lcrlll}
+	%\hline
+	links 	& \% mitte	& rechts	& & & \\	
+	links	& mittig	& \begin{tabular}{p{0.25\textwidth}}
+					hallo
+				\end{tabular} & & & \\
+	%\hline
+
+\end{tabular}
+
+	\caption{Meine Tabelle} %% Name der Tabelle
+\end{table}
+
+\section{Ein Bild}
+	\label{sec:Hoffmann}
+
+%% Eine Figure-Umgebung fuer Bilder
+	\begin{figure}
+		\includegraphics[height=0.35\textheight]{Images/lolcat-sample.jpg} \\
+		Quelle: Bach(2015)
+		\caption{Unterschrift des Bildes}
+		\label{fig:bild1}
+	\end{figure}
+
+
+
+\section{Formeln}
+
+ Jetzt kommen mitten im Text $ \sum_{i=1}^{100} 1+i $ eine Formel %% Eine Formel in der Textzeile
+ \footnote{Siehe \cite[S. 307]{ulmann-2015} } %% Verwendung einer Fusznote
+
+ Die Formel ist gegeben als:
+
+ hier noch etwas in der Zeile
+ \begin{displaymath} %% Formeln grosz und zentriert darstellen
+ \sum_{i=1}^{100} 1+i 
+ \end{displaymath} in der zeile weiterschreibe
+
+ 	Wird berechnet aus $1+Kostenfaktor*Einkaufspreis$
+
+\newpage
+
+
+Dieser Sachverhalt ist zu sehen in Abbildung \ref{fig:bild1} auf Seite \pageref{fig:bild1}. %% Referenzen auf Abbldung und deren entsprechende Seite
+
+
+\glqq{}bla \glq{}Ein Zitat im Zitat\grq{} bla\grqq{} %% Deutsche einfache und doppelte Anfuehrungszeichen
+
+%% Erneuer Wechsel zu romieschen Seitennummern
+\pagenumbering{roman}
+\setcounter{page}{2} %% Setzen des Seitenzaehlers, damit entsprechend weitergezaehlt wird.
+
+%% Abbildungsverzeichnis
+\listoffigures
+
+%% Tabellenzeichnis
+\listoftables
+
+%% Literaturverzeichnis
+\begin{thebibliography}{Ulmann(2015)}
+	\bibitem[Ulmann-2015]{ulmann-2015}  %% Ein Eintrag im Literaturverzeichnis mit Kurzname und Referenz
+		Ulmann, Bernd: \textit{Sage}.
+			ISB: 1-2345-6789, 2014.
+	\bibitem[Maier-1998]{maier-1998}
+		Maier, Felix.
+		Webseite: \url{http://www.google.de}, Letzter Aufruf: 22-JUN-2015, 20:36.
+\end{thebibliography}
+
+%% Ende des Inhalts des Dokuments
+\end{document}
